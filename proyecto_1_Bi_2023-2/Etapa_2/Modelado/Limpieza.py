@@ -1,11 +1,9 @@
 import pandas as pd
 import unicodedata
 import re
-import string
 import nltk
 from nltk.corpus import stopwords
 from sklearn.base import BaseEstimator, TransformerMixin
-from joblib import Parallel, delayed
 import ftfy
 import inflect
 from nltk import word_tokenize
@@ -43,11 +41,9 @@ class Limpieza(BaseEstimator, TransformerMixin):
         filtered_tokens = [token for token in tokens if token not in self.stop_words]
         return " ".join(filtered_tokens)
 
-# Esta lista contiene las stop words en español
 spanish_stopwords = set(stopwords.words('spanish'))
 
 def fix_malformed_words(text):
-    # Utiliza ftfy para corregir problemas de codificación
         text = ftfy.fix_text(text)
         return text
 

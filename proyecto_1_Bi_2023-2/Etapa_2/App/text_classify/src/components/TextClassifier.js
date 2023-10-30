@@ -38,7 +38,6 @@ function TextClassifier() {
         redirect: 'follow',
       };
 
-      // Replace 'http://localhost:8000/predict' with the correct API URL
       const response = await fetch('http://localhost:8000/predict', requestOptions);
 
       if (response.ok) {
@@ -144,12 +143,8 @@ function TextClassifier() {
 
   return (
     <div className="text-classifier">
-      <img
-        className="img-principal"
-        src="https://www.un.org/sustainabledevelopment/wp-content/uploads/2018/04/About_page_UNDP.png"
-        alt="Header Image"
-      />
       <h1 className="titulo">Clasificador de Textos ODS</h1>
+      <h2 className='subtitulo'>Grupo 11</h2>
       <div className="input-container">
         <div className="input-group">
           <textarea
@@ -198,14 +193,13 @@ function TextClassifier() {
         </div>
       )}
       <div className="odsd-link">
-        <div className="row">
-          <div className="col-6 txtlink">
+        <div>
+          <div className="txtlink">
             <h2 className="subtitulo">Objetivos de Desarrollo Sostenible (ODS)</h2>
             <p className="p-subtitulo">
-              Los Objetivos de Desarrollo Sostenible (ODS) constituyen un llamamiento universal a la acción para poner fin a la pobreza, proteger el planeta y mejorar las vidas y las perspectivas de las personas en todo el mundo. En 2015, todos los Estados Miembros de las Naciones Unidas aprobaron 17 Objetivos como parte de la Agenda 2030 para el Desarrollo Sostenible, en la cual se establece un plan para alcanzar los Objetivos en 15 años.
-            </p>
+            Los Objetivos de Desarrollo Sostenible (ODS) u Objetivos Globales son 17 objetivos globales interconectados diseñados para ser un «plan para lograr un futuro mejor y más sostenible para todos».1​ Los ODS fueron establecidos en 2015 por la Asamblea General de las Naciones Unidas (AG-ONU) y se pretende alcanzarlos para 2030. Están incluidos en una Resolución de la AG-ONU llamada 2030 Agenda.2​ Los ODS se desarrollaron en la Agenda de Desarrollo después de 2015 como el futuro marco de desarrollo global para suceder a los Objetivos de Desarrollo del Milenio en 2015.            </p>
           </div>
-          <div className="col-6 imglink">
+          <div className="imglink">
             <a
               href="https://www.un.org/sustainabledevelopment/es/objetivos-de-desarrollo-sostenible/"
               target="_blank"
@@ -215,6 +209,7 @@ function TextClassifier() {
                 className="img-ods"
                 src="https://www.nosolofilms.org/wp-content/uploads/2021/04/objetivos-del-desarrollo-sostenible-.png"
                 alt="Ir a los ODS"
+                width={500}
               />
             </a>
           </div>
